@@ -19,6 +19,14 @@ export const addCard = (payload) => ({ type: 'ADD_CARD', payload });
 
 export const updateSearchString = (payload) => ({ type: 'UPDATE_SEARCHSTRING', payload });
 
+export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
+
+export const getColumnsByList = ({ columns }, listId) => columns.filter((column) => column.listId === listId);
+
+export const getAllLists = state => state.lists;
+
+export const addList = (payload) => ({ type: 'ADD_LIST', payload });
+
 const reducer = (state, action) => {
   switch (action.type) {
     case 'ADD_COLUMN':
@@ -36,9 +44,15 @@ const reducer = (state, action) => {
     case 'UPDATE_SEARCHSTRING':
       return { ...state, ...action.payload };
 
+      
+    case 'ADD_LIST':
+    return {...state, lists: [...state.lists, {id: shortid(), ...action.payload}],
+    };
+
     default:
       return state;
-  }
+  };
+
 };
 
 const store = createStore(

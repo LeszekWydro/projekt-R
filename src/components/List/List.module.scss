@@ -35,6 +35,11 @@
 
 .columns {
   display: flex;
-  // justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.src {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
