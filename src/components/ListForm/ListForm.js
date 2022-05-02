@@ -20,9 +20,9 @@ const ListForm = () => {
 
   return (
     <form className={styles.listForm} onSubmit={handleSubmit}>
-      <span>Title:</span>
+      <span className={styles.span}>Title:</span>
       <TextInput value={title} onChange={(e) => setTitle(e.target.value)} />
-      <span>Description:</span>
+      <span className={styles.span}>Description:</span>
       <TextInput
         value={description}
         onChange={(e) => setDescription(e.target.value)}

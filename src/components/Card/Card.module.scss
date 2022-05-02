@@ -10,8 +10,22 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    color: #2f3542
+
+}
+span {
+    margin:0;
 }
 
 .isFavorite {
     color: $color-warning;
   }
+
+
+button {
+    border: none;
+    background-color: $color-light;
+    cursor: pointer;
+}
+
+

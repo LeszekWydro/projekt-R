@@ -11,13 +11,13 @@ const Card = props => {
     const toggle = e => {
         e.preventDefault();
         dispatch(toggleFavorite({ id: props.id, isFavorite: props.isFavorite }))
-      };
+      }
 
     return (
         <li className={styles.card}>{props.title}
-        <button onClick={toggle}>
-          <span className={clsx(' fa fa-star-o', props.isFavorite && styles.isFavorite)}></span>
-        </button>
+        <button type="button" onClick={toggle} className={clsx(styles.button, props.isFavorite && styles.isFavorite)}>
+                <span className='fa fa-star-o' />
+            </button>
         </li>
     );
 };

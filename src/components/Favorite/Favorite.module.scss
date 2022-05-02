@@ -1,8 +1,22 @@
+@use "sass:math";
 @import '../../styles/settings.scss';
 
 .description {
-    display: flex;
-    justify-content: center;
-    color: $color-light;
-    font-size: 25px;
+        display: flex;
+        justify-content: center;
+        color: $color-light;
+        font-size: 25px;
+    }
+
+.wrapper {
+    justify-content: end;
+    width: calc(33% - 12px);
+    background: $color-light;
+    margin: 0 auto;
+    padding: ($base-size * 1.5);
+    border-radius: $radius;
 }
+
+.cards {
+    padding: math.div($base-size, 2) 0;
+  }
